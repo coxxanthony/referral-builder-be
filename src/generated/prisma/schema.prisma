@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Referral {
+  id Int @id @default(autoincrement())
+
+  // Personal details
+  given_name String
+  surname    String
+  email      String
+  phone      String?
+
+  // Address
+  home     String?
+  street   String?
+  suburb   String?
+  state    String?
+  postcode String?
+  country  String?
+
+  created_at DateTime @default(now())
+}
