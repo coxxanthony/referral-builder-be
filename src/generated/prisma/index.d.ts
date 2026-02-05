@@ -895,6 +895,7 @@ export namespace Prisma {
     postcode: string | null
     country: string | null
     created_at: Date | null
+    updated_at: Date | null
   }
 
   export type ReferralMaxAggregateOutputType = {
@@ -910,6 +911,7 @@ export namespace Prisma {
     postcode: string | null
     country: string | null
     created_at: Date | null
+    updated_at: Date | null
   }
 
   export type ReferralCountAggregateOutputType = {
@@ -925,6 +927,7 @@ export namespace Prisma {
     postcode: number
     country: number
     created_at: number
+    updated_at: number
     _all: number
   }
 
@@ -950,6 +953,7 @@ export namespace Prisma {
     postcode?: true
     country?: true
     created_at?: true
+    updated_at?: true
   }
 
   export type ReferralMaxAggregateInputType = {
@@ -965,6 +969,7 @@ export namespace Prisma {
     postcode?: true
     country?: true
     created_at?: true
+    updated_at?: true
   }
 
   export type ReferralCountAggregateInputType = {
@@ -980,6 +985,7 @@ export namespace Prisma {
     postcode?: true
     country?: true
     created_at?: true
+    updated_at?: true
     _all?: true
   }
 
@@ -1082,6 +1088,7 @@ export namespace Prisma {
     postcode: string | null
     country: string | null
     created_at: Date
+    updated_at: Date
     _count: ReferralCountAggregateOutputType | null
     _avg: ReferralAvgAggregateOutputType | null
     _sum: ReferralSumAggregateOutputType | null
@@ -1116,6 +1123,7 @@ export namespace Prisma {
     postcode?: boolean
     country?: boolean
     created_at?: boolean
+    updated_at?: boolean
   }, ExtArgs["result"]["referral"]>
 
   export type ReferralSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1131,6 +1139,7 @@ export namespace Prisma {
     postcode?: boolean
     country?: boolean
     created_at?: boolean
+    updated_at?: boolean
   }, ExtArgs["result"]["referral"]>
 
   export type ReferralSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1146,6 +1155,7 @@ export namespace Prisma {
     postcode?: boolean
     country?: boolean
     created_at?: boolean
+    updated_at?: boolean
   }, ExtArgs["result"]["referral"]>
 
   export type ReferralSelectScalar = {
@@ -1161,9 +1171,10 @@ export namespace Prisma {
     postcode?: boolean
     country?: boolean
     created_at?: boolean
+    updated_at?: boolean
   }
 
-  export type ReferralOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "given_name" | "surname" | "email" | "phone" | "home" | "street" | "suburb" | "state" | "postcode" | "country" | "created_at", ExtArgs["result"]["referral"]>
+  export type ReferralOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "given_name" | "surname" | "email" | "phone" | "home" | "street" | "suburb" | "state" | "postcode" | "country" | "created_at" | "updated_at", ExtArgs["result"]["referral"]>
 
   export type $ReferralPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Referral"
@@ -1181,6 +1192,7 @@ export namespace Prisma {
       postcode: string | null
       country: string | null
       created_at: Date
+      updated_at: Date
     }, ExtArgs["result"]["referral"]>
     composites: {}
   }
@@ -1616,6 +1628,7 @@ export namespace Prisma {
     readonly postcode: FieldRef<"Referral", 'String'>
     readonly country: FieldRef<"Referral", 'String'>
     readonly created_at: FieldRef<"Referral", 'DateTime'>
+    readonly updated_at: FieldRef<"Referral", 'DateTime'>
   }
     
 
@@ -2008,7 +2021,8 @@ export namespace Prisma {
     state: 'state',
     postcode: 'postcode',
     country: 'country',
-    created_at: 'created_at'
+    created_at: 'created_at',
+    updated_at: 'updated_at'
   };
 
   export type ReferralScalarFieldEnum = (typeof ReferralScalarFieldEnum)[keyof typeof ReferralScalarFieldEnum]
@@ -2118,6 +2132,7 @@ export namespace Prisma {
     postcode?: StringNullableFilter<"Referral"> | string | null
     country?: StringNullableFilter<"Referral"> | string | null
     created_at?: DateTimeFilter<"Referral"> | Date | string
+    updated_at?: DateTimeFilter<"Referral"> | Date | string
   }
 
   export type ReferralOrderByWithRelationInput = {
@@ -2133,6 +2148,7 @@ export namespace Prisma {
     postcode?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     created_at?: SortOrder
+    updated_at?: SortOrder
   }
 
   export type ReferralWhereUniqueInput = Prisma.AtLeast<{
@@ -2151,6 +2167,7 @@ export namespace Prisma {
     postcode?: StringNullableFilter<"Referral"> | string | null
     country?: StringNullableFilter<"Referral"> | string | null
     created_at?: DateTimeFilter<"Referral"> | Date | string
+    updated_at?: DateTimeFilter<"Referral"> | Date | string
   }, "id">
 
   export type ReferralOrderByWithAggregationInput = {
@@ -2166,6 +2183,7 @@ export namespace Prisma {
     postcode?: SortOrderInput | SortOrder
     country?: SortOrderInput | SortOrder
     created_at?: SortOrder
+    updated_at?: SortOrder
     _count?: ReferralCountOrderByAggregateInput
     _avg?: ReferralAvgOrderByAggregateInput
     _max?: ReferralMaxOrderByAggregateInput
@@ -2189,6 +2207,7 @@ export namespace Prisma {
     postcode?: StringNullableWithAggregatesFilter<"Referral"> | string | null
     country?: StringNullableWithAggregatesFilter<"Referral"> | string | null
     created_at?: DateTimeWithAggregatesFilter<"Referral"> | Date | string
+    updated_at?: DateTimeWithAggregatesFilter<"Referral"> | Date | string
   }
 
   export type ReferralCreateInput = {
@@ -2203,6 +2222,7 @@ export namespace Prisma {
     postcode?: string | null
     country?: string | null
     created_at?: Date | string
+    updated_at?: Date | string
   }
 
   export type ReferralUncheckedCreateInput = {
@@ -2218,6 +2238,7 @@ export namespace Prisma {
     postcode?: string | null
     country?: string | null
     created_at?: Date | string
+    updated_at?: Date | string
   }
 
   export type ReferralUpdateInput = {
@@ -2232,6 +2253,7 @@ export namespace Prisma {
     postcode?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
+    updated_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReferralUncheckedUpdateInput = {
@@ -2247,6 +2269,7 @@ export namespace Prisma {
     postcode?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
+    updated_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReferralCreateManyInput = {
@@ -2262,6 +2285,7 @@ export namespace Prisma {
     postcode?: string | null
     country?: string | null
     created_at?: Date | string
+    updated_at?: Date | string
   }
 
   export type ReferralUpdateManyMutationInput = {
@@ -2276,6 +2300,7 @@ export namespace Prisma {
     postcode?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
+    updated_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type ReferralUncheckedUpdateManyInput = {
@@ -2291,6 +2316,7 @@ export namespace Prisma {
     postcode?: NullableStringFieldUpdateOperationsInput | string | null
     country?: NullableStringFieldUpdateOperationsInput | string | null
     created_at?: DateTimeFieldUpdateOperationsInput | Date | string
+    updated_at?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2363,6 +2389,7 @@ export namespace Prisma {
     postcode?: SortOrder
     country?: SortOrder
     created_at?: SortOrder
+    updated_at?: SortOrder
   }
 
   export type ReferralAvgOrderByAggregateInput = {
@@ -2382,6 +2409,7 @@ export namespace Prisma {
     postcode?: SortOrder
     country?: SortOrder
     created_at?: SortOrder
+    updated_at?: SortOrder
   }
 
   export type ReferralMinOrderByAggregateInput = {
@@ -2397,6 +2425,7 @@ export namespace Prisma {
     postcode?: SortOrder
     country?: SortOrder
     created_at?: SortOrder
+    updated_at?: SortOrder
   }
 
   export type ReferralSumOrderByAggregateInput = {

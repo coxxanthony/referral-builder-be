@@ -132,7 +132,8 @@ exports.Prisma.ReferralScalarFieldEnum = {
   state: 'state',
   postcode: 'postcode',
   country: 'country',
-  created_at: 'created_at'
+  created_at: 'created_at',
+  updated_at: 'updated_at'
 };
 
 exports.Prisma.SortOrder = {
